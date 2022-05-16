@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Inscripción a las X Jornadas matemáticas - Barcelona, 4 y 5 de mayo, 2019</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Formulario de inscripción a las X Jornadas matemáticas que tendrán lugar los días 4 y 5 de mayo de 2019." />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css" />
+</head>
+
+<body>
+    <a class="sr" href="#main">Saltar al contenido principal</a>
+
+    <main id="main">
+        <div class="container">
+            <h2>Inscripción a enciclopedia front end</h2>
+            <p class="required">Los campos señalados con * són obligatorios</p>
+            <form name="inscripcion" action="#" method="POST" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <ul>
+                        <li class="controlInlineHalf">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" name="nombre" id="nombre" value=""
+                                pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,64}"
+                                title="Solo caracteres alfabéticos. Un mínimo de 2 y un máximo de 64 caracteres"
+                                required autofocus class="halfInline" />
+                        </li>
+                        <li class="controlInlineHalf">
+                            <label for="apellidos">Apellidos *</label>
+                            <input type="text" name="apellidos" id="apellidos" value=""
+                                pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,128}"
+                                title="olo caracteres alfabéticos. Un mínimo de 2 y un máximo de 128 caracteres"
+                                required class="halfInline" />
+                        </li>
+                        <li class="controlInlineHalf">
+                            <label for="correo">Correo electrónico *</label>
+                            <input type="email" name="correo" id="correo" value="" required class="halfInLine" />
+                        </li>
+                        <li class="controlInlineHalf">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" name="telefono" id="telefono" value="" required class="halfInLine" />
+                        </li>
+                        <li>
+                            <label for="foto">Fotografía para la acreditación</label>
+                            <input type="file" name="foto" id="foto" required />
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Perfil de participante</legend>
+                    <ul>
+                        <li>
+                            <label for="interes">¿Por qué está interesado en participar? *</label>
+                            <textarea name="interes" id="interes" required></textarea>
+                        </li>
+                        <li>
+                            <label for="actividad">Actividad profesional *</label>
+                            <select name="actividad" id="actividad" required class="third">
+                                <option value="">Seleccione una actividad profesional</option>
+                                <option value="Estudiant batxillerat">Estudiante de bachillerato</option>
+                                <option value="Estudiant universitari">Estudiante universitario</option>
+                                <option value="Professor batxillerat">Profesor de bachillerato</option>
+                                <option value="Professor universitari">Profesor universitario</option>
+                                <option value="Altra activitat professional">Otra actividad profesional</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="talleres">¿En qué talleres está interesado? *<span>Para seleccionar más de una
+                                    opción, mantened pulsada la tecla Control (Windows) / Command (Mac) mientras hacéis
+                                    clic a las opciones</span></label>
+                            <select name="talleres" id="talleres" required multiple size="8" class="third">
+                                <option value="">Seleccione uno o más talleres</option>
+                                <option value="La encriptación a lo largo de la historia">La encriptación a lo largo de
+                                    la historia</option>
+                                <option value="Seguridad informática">Seguridad informática</option>
+                                <option value="Redes sociales y teoría de grafos">Redes sociales y teoría de grafos
+                                </option>
+                                <option value="Matemáticas y azar">Matemáticas y azar</option>
+                                <option value="Problemas matemáticos del milenio">Problemas matemáticos del milenio
+                                </option>
+                                <option value="La predicción del tiempo">La predicción del tiempo</option>
+                                <option value="Fractales en el aula">Fractales en el aula</option>
+                            </select>
+                        </li>
+                        <li>Seleccione una de las tres opciones siguientes: *
+                            <ul class="radioGroup">
+                                <li>
+                                    <input type="radio" name="dias" id="dosdias" value="Dias 4 y 5" required>
+                                    <label for="dosdias">Asistiré los días 4 y 5 de mayo</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dias" id="dia4" value="Dia 4" required>
+                                    <label for="dia4">Asistiré solo el día 4 de mayo</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dias" id="dia5" value="Dia 5" required>
+                                    <label for="dia4">Asistiré solo el día 5 de mayo</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </fieldset>
+                <div class="outFieldset">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="politica" id="politica" value="Aceptación de política y aviso"
+                                required />
+                            <label for="politica">He leído y acepto la <a href="#">política de privacidad</a> y el <a
+                                    href="#">aviso legal</a> *</label>
+                        </li>
+                    </ul>
+                    <input type="submit" value="Enviar" />
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
